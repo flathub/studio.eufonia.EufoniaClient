@@ -33,8 +33,8 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://xorg.freedesktop.org/archive/individual/app/xrandr-1.5.2.tar.xz
-        sha256: c8bee4790d9058bacc4b6246456c58021db58a87ddda1a9d0139bf5f18f1f240
+        url: https://xorg.freedesktop.org/archive/individual/app/xrandr-1.5.3.tar.xz
+        sha256: f8dd7566adb74147fab9964680b6bbadee87cf406a7fcff51718a5e6949b841c
         x-checker-data:
           type: anitya
           project-id: 14957
@@ -68,8 +68,8 @@ modules:
     build-commands:
       - ar -x Eufonia-Client.deb
       - tar -xf data.tar.gz
-      - 'install -Dm755 usr/bin/eufonia-client /app/bin/eufonia-client'
-      - 'install -Dm755 usr/bin/cloudflared /app/bin/cloudflared'
+      - install -Dm755 usr/bin/eufonia-client /app/bin/eufonia-client
+      - install -Dm755 usr/bin/cloudflared /app/bin/cloudflared
       - install -Dm644 usr/share/applications/Eufonia\ Client.desktop /app/share/applications/studio.eufonia.EufoniaClient.desktop
       - install -Dm644 usr/share/icons/hicolor/128x128/apps/eufonia-client.png /app/share/icons/hicolor/128x128/apps/studio.eufonia.EufoniaClient.png
       - install -Dm644 usr/share/icons/hicolor/256x256@2/apps/eufonia-client.png /app/share/icons/hicolor/256x256@2/apps/studio.eufonia.EufoniaClient.png
