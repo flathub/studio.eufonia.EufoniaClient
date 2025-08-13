@@ -61,13 +61,13 @@ modules:
     buildsystem: simple
     sources:
       - type: file
-        url: https://client.eufonia.studio/api/v2/download?file_type=installer&platform=debian-x86_64&version=2.2.2
+        url: https://eufonia-client.eufonia.studio/api/v2/download?file_type=installer&platform=debian-x86_64&version=3.0.0
         dest-filename: Eufonia-Client.deb
-        sha256: 14ecc0e3a40a3a4c1af15b95fd14fdde711adf6ee80a6b9372f0bdeb952c111f
+        sha256: 70c27e6d5abb1f47f392f98e772ff7857c49aa4b8fdd2164935a932d8014f32c
         only-arches: [x86_64] #This source is only used on x86_64 Computers
         x-checker-data:
           type: json
-          url: https://client.eufonia.studio/api/v2/update/latest?platform=debian-x86_64
+          url: https://eufonia-client.eufonia.studio/api/v2/update/latest?platform=debian-x86_64
           version-query: .version
           url-query: .url
           is-main-source: true
