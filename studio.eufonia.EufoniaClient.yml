@@ -7,6 +7,15 @@ tags:
   - proprietary
 
 command: eufonia-client
+add-extensions:
+  studio.eufonia.EufoniaClient.Extension:
+    version: '50'
+    directory: extensions
+    add-ld-path: lib
+    merge-dirs: bin;lib
+    subdirectories: true
+    no-autodownload: true
+    autodelete: true
 finish-args:
   - --device=all
   - --share=network
@@ -15,6 +24,7 @@ finish-args:
   - --socket=fallback-x11
   - --share=network
   - --socket=pulseaudio
+  - --env=PATH=/app/extensions/bin:/app/bin:/usr/bin
     # for Discord RPC
   - --filesystem=xdg-run/app/com.discordapp.Discord:create
     # Userspace visibility for manual hugepages configuration
@@ -27,6 +37,8 @@ cleanup:
   - /include
   - /lib/cmake
   - /lib/pkgconfig
+cleanup-commands:
+  - mkdir -p ${FLATPAK_DEST}/extensions
 
 modules:
   - name: xrandr
