@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if [ -e /dev/nvidiactl ] ||
+   [ -e /dev/nvidia0 ] ||
+   [ -e /dev/nvidia-modeset ] ||
+   [ -e /dev/nvidia-uvm ]; then
+    export WEBKIT_DISABLE_DMABUF_RENDERER=1
+fi
+
+exec /app/libexec/eufonia-client "$@"
