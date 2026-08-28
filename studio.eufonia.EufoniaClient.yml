@@ -73,6 +73,8 @@ modules:
     buildsystem: simple
     sources:
       - type: file
+        path: eufonia-client-wrapper
+      - type: file
         url: https://eufonia-client.eufonia.studio/api/v2/download?file_type=installer&platform=debian-x86_64&version=3.11.0
         dest-filename: Eufonia-Client.deb
         sha256: f7e8b1d73c8d636fee35ea134647172282b1067bec129806b4d26ae621c7908d
@@ -86,7 +88,8 @@ modules:
     build-commands:
       - ar -x Eufonia-Client.deb
       - tar -xf data.tar.gz
-      - install -Dm755 usr/bin/eufonia-client /app/bin/eufonia-client
+      - install -Dm755 usr/bin/eufonia-client /app/libexec/eufonia-client
+      - install -Dm755 eufonia-client-wrapper /app/bin/eufonia-client
       - install -Dm644 usr/share/applications/Eufonia\ Client.desktop /app/share/applications/studio.eufonia.EufoniaClient.desktop
       - install -Dm644 usr/share/icons/hicolor/128x128/apps/eufonia-client.png /app/share/icons/hicolor/128x128/apps/studio.eufonia.EufoniaClient.png
       - install -Dm644 usr/share/icons/hicolor/256x256@2/apps/eufonia-client.png /app/share/icons/hicolor/256x256@2/apps/studio.eufonia.EufoniaClient.png
