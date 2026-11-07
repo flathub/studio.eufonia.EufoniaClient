@@ -75,9 +75,9 @@ modules:
       - type: file
         path: eufonia-client-wrapper
       - type: file
-        url: https://eufonia-client.eufonia.studio/api/v2/download?file_type=installer&platform=debian-x86_64&version=3.20.0
+        url: https://eufonia-client.eufonia.studio/api/v2/download?file_type=installer&platform=debian-x86_64&version=4.0.0
         dest-filename: Eufonia-Client.deb
-        sha256: 549710733c221a604ba14665deaa5cc1dc8987baee8c4212e26974fd1d1eafbd
+        sha256: 68f6647a75024efc989836bcbfa8b9bd779e9306b0ff2acc13d745903028ff87
         only-arches: [x86_64] #This source is only used on x86_64 Computers
         x-checker-data:
           type: json
@@ -90,7 +90,7 @@ modules:
       - tar -xf data.tar.gz
       - install -Dm755 usr/bin/eufonia-client /app/libexec/eufonia-client
       - install -Dm755 eufonia-client-wrapper /app/bin/eufonia-client
-      - install -Dm644 usr/share/applications/Eufonia\ Client.desktop /app/share/applications/studio.eufonia.EufoniaClient.desktop
+      - install -Dm644 usr/share/applications/eufonia-client.desktop /app/share/applications/studio.eufonia.EufoniaClient.desktop
       - install -Dm644 usr/share/icons/hicolor/128x128/apps/eufonia-client.png /app/share/icons/hicolor/128x128/apps/studio.eufonia.EufoniaClient.png
       - install -Dm644 usr/share/icons/hicolor/256x256@2/apps/eufonia-client.png /app/share/icons/hicolor/256x256@2/apps/studio.eufonia.EufoniaClient.png
       - install -Dm644 usr/share/icons/hicolor/32x32/apps/eufonia-client.png /app/share/icons/hicolor/32x32/apps/studio.eufonia.EufoniaClient.png
