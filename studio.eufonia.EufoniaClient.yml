@@ -75,9 +75,9 @@ modules:
       - type: file
         path: eufonia-client-wrapper
       - type: file
-        url: https://eufonia-client.eufonia.studio/api/v2/download?file_type=installer&platform=debian-x86_64&version=4.0.3
+        url: https://eufonia-client.eufonia.studio/api/v2/download?file_type=installer&platform=debian-x86_64&version=4.1.1
         dest-filename: Eufonia-Client.deb
-        sha256: 20b53d30e9d89428b6ba729a52d843a0f835a051b496f98811ed4b6bed4d4e43
+        sha256: 236d8908fefb8d396840a03a94a1a44deb2c78b9480dfdfbd5ec78dee9e05942
         only-arches: [x86_64] #This source is only used on x86_64 Computers
         x-checker-data:
           type: json
